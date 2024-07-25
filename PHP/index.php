@@ -36,7 +36,17 @@
         <label>3° numero: </label>
         <input type="number" id="n3" name="n3"/><br>
 
+        <label>Insira uma palavra: </label>
+        <input type="string" id="palavra" name="palavra"/><br>
 
+        <label>Insira um dia: </label>
+        <input type="number" id="dia" name="dia"/><br>
+
+        <label>Insira um mês: </label>
+        <input type="number" id="mes" name="mes"/><br>
+
+        <label>Insira um ano: </label>
+        <input type="number" id="ano" name="ano"/><br>
 
         <button> Calcular
             <?php
@@ -48,6 +58,10 @@
                 $n1 = $_POST['n1'];
                 $n2 = $_POST['n2'];
                 $n3 = $_POST['n3'];
+                $palavra = $_POST['palavra'];
+                $dia = $_POST['dia'];
+                $mes = $_POST['mes'];
+                $ano = $_POST['ano'];
             ?>
         </button><br><br>
 
@@ -65,8 +79,17 @@
                 "\nVerificar Idade: ".verifIdade($idade).
                 "\nDobro: ".dobro($num).
                 "\nConverter Celsius Fahrenheit: ".celsiusParaFahrenheit($temp).
-                "\nO maior número é: ".maiorDeTres($num1,$num2,$num3).
-                "\nPositivo ou Negativo: ".verifPositivoNegativo($num);
+                "\nO maior número é: ".maiorDeTres($n1,$n2,$n3).
+                "\nPositivo ou Negativo: ".verifPositivoNegativo($num).
+                "\nA tabuada é: ".tabuada($num).
+                "\nA soma até ".$num." é: ".somaAteEsseNum($num).
+                #"\nÉ primo? ".verifPrimo($num).
+                "\nPalindromo: ".verifPalindromo($palavra).
+                #"\nO fatorial de ".$num." é: ".calcFatorial($num).
+                "\nOs pares anteriores a".$num."são: ".exibirPares($num).
+                #"\nA contagem de vogais é igual a".contarVogais($palavra).
+                "\nA data é valida?".validarData($dia,$mes,$ano);
+
             ?>
         </textArea>
     </form>

@@ -108,15 +108,84 @@ function maiorDeTres($num1,$num2,$num3){
 
 function verifPositivoNegativo($num){
     if ($num = 0){
-        echo "Você digitou zero";
+        return "Você digitou zero";
         if ($num < 0){
-            echo "O número digitado é negativo";
+            return "O número digitado é negativo";
         }else{
-            echo "O número digitado é positivo";
+            return "O número digitado é positivo";
         }
     }
 }
 
+function tabuada($num){
+    $result = '';
+
+    for ($i=0; $i < 11; $i++) {
+        $result .= $num * $i; 
+    }
+    return $result;
+}
+
+function somaAteEsseNum($num){
+    $result = 0;
+
+    for ($i=0; $i < $num+1; $i++) {
+        $result += $i; 
+    }
+    return $result;
+}
+
+#function verifPrimo($num){
+#    if($num % 1 == 0 and )
+#
+#}
+
+function verifPalindromo($palavra){
+    if ($palavra == strrev($palavra)){
+        return "É um Palindromo, veja: ".strrev($palavra);
+    }else{
+        return "Não é um Palindromo, veja: ".strrev($palavra);
+    }
+}
+
+function calcFatorial($num){
+    $result = 0;
+
+    for ($i=0; $i < $num; $i++){
+        $result *= $i; 
+    }
+
+    return $result;
+}
+
+function exibirPares($num){
+    $pares = '';
+
+    for ($i=0; $i < $num; $i++){
+        if ($i % 2 == 0){
+            $pares .= $i.",";
+        }
+    }
+
+    return $pares;
+}
+
+#function contarVogais($palavra){
+
+#}
+
+#function contarPrimos(@num){
+
+#}
+
+function validarData($dia,$mes,$ano){
+    $validar = bool;
+    
+    $validar = (checkdate($mes,$dia,$ano));
+
+    return $validar;
+    
+}
 
 /*
 //imprimir os dados na tela
